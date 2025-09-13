@@ -27,7 +27,7 @@ public:
 private:
     TYPES type;     // "Deposit" or "Withdraw"
     double amount;         // Amount of money
-     std::chrono::time_point<std::chrono::system_clock> timestamp; // Date & time string
+    std::chrono::time_point<std::chrono::system_clock> timestamp; // Date & time string
 };
 
 // ---------------- Account Class ----------------
@@ -36,11 +36,15 @@ public:
     Account(int number, const std::string& name, double initialBalance);
 
     void deposit(double amount);
-    bool withdraw(double amount); // returns false if insufficient funds
+    void withdraw(double amount); // returns false if insufficient funds
     double getBalance() const;
     int getAccountNumber() const;
-    std::string getHolderName() const;
+    double lower_threshold;
 
+    std::string getHolderName() const;
+    
+    
+    void update_history(Transaction t);
     void printStatement() const;
 
 private:
@@ -49,7 +53,6 @@ private:
     double balance;
     std::vector<Transaction> history;
 
-    void addTransaction(const std::string& type, double amount);
 };
 
 
