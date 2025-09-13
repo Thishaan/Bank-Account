@@ -12,15 +12,22 @@
 
         return this->type; //
     }
-    double Transaction::getAmount() const{
+     double Transaction::getAmount() const{
 
         return this->amount;
+
+
     }
 
      std::chrono::time_point<std::chrono::system_clock> Transaction::getTimestamp() const{
 
         return this->timestamp;
     }
+
+
+
+
+
 
 
 

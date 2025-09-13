@@ -2,17 +2,15 @@
 
 
 
+
 int main(){
 
-
-    Transaction t = Transaction( std::chrono::system_clock::now(),2323.02, DEPOSIT);
-
+    Account account =  Account(2398039222, "Alan", 34);
 
 
-    std::cout<<t.getAmount()<<std::endl;
-    std::cout<<t.getType()<<std::endl;  
-        
+    account.deposit(23);
 
+    account.printStatement();
 
     return 0;
 
