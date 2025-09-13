@@ -1,4 +1,4 @@
-#include "Client.h"
+#include "../headers/Client.h"
 
 
 using boost::asio::ip::tcp;
@@ -14,6 +14,9 @@ Client::~Client() = default;
 void Client::sendRequest(){
 
     
-    tcp req = ;
+    tcp req;
+
+
+    re
 }
 

@@ -2,7 +2,8 @@
 #include <iostream>
 #include <boost/asio.hpp>
 
-
+#ifdef   CLIENT_h
+# define CLIENT_h
 
 
 class Client{
@@ -18,4 +19,10 @@ class Client{
 
 
 
-}
+};
+
+
+extern Client cli;
+
+#endif
+
